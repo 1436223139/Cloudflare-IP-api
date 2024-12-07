@@ -17,5 +17,6 @@ jobs:
           node-version: 20
       - run: git clone https://github.com/1436223139/Cloudflare-IP-api.git
       - run: cd Cloudflare-IP-api && npm -i
+      - run : npm run deploy:cloudflare
         env:
           NODE_AUTH_TOKEN: ${{secrets.CF_API_TOKEN}}
